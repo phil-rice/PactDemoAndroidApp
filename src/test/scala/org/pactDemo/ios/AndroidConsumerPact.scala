@@ -5,7 +5,7 @@ import org.pactDemo.utilities.FinatraClient
 import org.scalatest.{FunSpec, Matchers}
 import org.pactDemo.utilities.Futures._
 
-class IosConsumerPact extends FunSpec with Matchers {
+class AndroidConsumerPact extends FunSpec with Matchers {
 
   import com.itv.scalapact.ScalaPactForger._
 
@@ -18,7 +18,7 @@ class IosConsumerPact extends FunSpec with Matchers {
 
 
       forgePact
-        .between("Ios")
+        .between("Android")
         .and("Provider")
         .addInteraction(
           interaction
