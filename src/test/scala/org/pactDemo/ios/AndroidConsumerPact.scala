@@ -29,7 +29,7 @@ class AndroidConsumerPact extends FunSpec with Matchers {
         )
         .runConsumerTest {
           mockConfig =>
-            val client = new FinatraClient(mockConfig.host+":" + mockConfig.port, x => x)
+            val client = new FinatraClient(mockConfig.host, mockConfig.port, x => x)
             client(1).await
         }
     }

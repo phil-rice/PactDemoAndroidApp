@@ -8,7 +8,7 @@ case class AndroidRequest(@RouteParam id: Int)
 
 
 class AndroidAppController extends Controller {
-  val client = new FinatraClient(Heroku.provider, _.replace("}", ""","server":"android"}"""))
+  val client = new FinatraClient(Heroku.providerHost, Heroku.providerPort, _.replace("}", ""","server":"android"}"""))
   get("/id/:id") { request: AndroidRequest =>
     client(request.id).map(response.ok(_).contentType("application/json"))
   }
